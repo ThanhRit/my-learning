@@ -1,0 +1,3 @@
+- Thẻ đầu tiên mỗi file html là <!DOCTYPE html>
+- Thẻ Head định nghĩa tiêu đề (thẻ title), thẻ meta charset để hỗ trợ mã hoá ngôn ngữ (ví dự UTF-8)
+- Thẻ body chứa nội dung của trang web
