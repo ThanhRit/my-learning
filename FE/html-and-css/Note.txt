@@ -1,3 +1,47 @@
 - Thẻ đầu tiên mỗi file html là <!DOCTYPE html>
 - Thẻ Head định nghĩa tiêu đề (thẻ title), thẻ meta charset để hỗ trợ mã hoá ngôn ngữ (ví dự UTF-8)
 - Thẻ body chứa nội dung của trang web
+- Các thẻ thông dụng trong thẻ body
+    1. h1 - h6 (heading) thường là tiêu đề (thường 1 file html chỉ dùng 1 thẻ h1)
+    2. p - paragraph thẻ nội dung đoạn văn bản
+    3. img - image thẻ hình ảnh (thuộc tính src là link ảnh, thuộc tính alt là hiển thị văn bản khi ảnh lỗi)
+    4. a - anchor (thẻ đặt liên kết)
+    5. ul (unorder list), ol (order list), li (list item) thẻ chứa danh sách sắp xếp hoặc không sắp xếp 
+    6. table - thẻ xây dựng bảng (thead - tiêu đề bảng thường đi với th, tbody - nội dung bảng thường đi với tr, td)
+    7.input - thẻ đầu vào dữ liệu của user
+    8.button - là 1 nút có thể click vào
+    9. div - thẻ tạo khối bao quanh
+- Attribute các thẻ thường có các thuộc tính bên trong ví dụ thẻ h1 có thuộc tính là title
+- Các cách sử dụng css trong html (Cascading Style Sheets)
+    + Internal (Viết style thực tiếp thẻ style vào trong file html - có thể viết bất cứ đâu trong file miễn là hợp lệ)
+    + External (Viết style vào 1 file .css sau đó trong file html link đến)
+    + Inline (viết thẳng vào các thẻ trong file html bằng thuộc tính style)
+- CSS Selector là cách gọi 1 element trong html để css
+    + id chỉ được dùng duy nhất 1 lần trong file html, khi viết css trỏ đến id thì dùng dấu # cộng với id
+    + class được dùng để nhóm nhiều đối tượng, khi viết css trỏ đến class thì dùng dấu . cộng với class
+- Thứ tự ưu tiên CSS
+    1. Internal và External không có thứ tự ưu tiên, cái nào gọi ra sau thì sẽ override lại 
+    2. Inline - 1000
+    3. #id - 100
+    4. .class - 10
+    5. tag - 1
+    6. Universal selector (*) trỏ đến tất cả các phần tử trung file html - 0
+    7. thẻ con có thể thừa hưởng thuộc tính của thẻ cha - 0
+    8. đặt !important > 1000 độ ưu tiên cao nhất
+
+    Điểm càng cao thì độ ưu tiên càng cao
+
+- CSS variable : cách đặt biến css "--" + "tên biến" -> cách dùng var("--" + "tên biến")
+- Các đơn vị trong css
+    1.Absolute units (đơn vị tuyệt đối)
+    +   px (được sử dụng nhiều nhất)
+    +   pt
+    +   cm
+    +   mm
+    +   inch
+    +   pc
+    2. Relative unit (đơn vị trương đối)
+    + % tỉ lệ so với thẻ chứa nó ( phụ thuộc vào thẻ chứa nó)
+    + rem (phụ thuộc vào thẻ html) tỉ lệ 1-1 với thẻ html
+    + em -> phụ thuộc vào thẻ gần nhất chứa nó mà có css tỉ lệ 1-1
+    + vw - width , vh - height (viewport) tỉ lệ kích thước chiều ngang và chiều dài của trình duyệt
