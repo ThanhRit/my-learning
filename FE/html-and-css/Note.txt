@@ -45,3 +45,43 @@
     + rem (phụ thuộc vào thẻ html) tỉ lệ 1-1 với thẻ html
     + em -> phụ thuộc vào thẻ gần nhất chứa nó mà có css tỉ lệ 1-1
     + vw - width , vh - height (viewport) tỉ lệ kích thước chiều ngang và chiều dài của trình duyệt
+- Thuộc tính padding là thành phần đệm nằm giữa content của element và border của nó, khi kích thước padding tăng thì kích thước background cũng tăng
+    + nếu nhập padding : 10px -> cả 4 hướng đều 10px
+    + nếu nhập padding : 10px 20px -> trên dưới 10px, trái phải 20px
+    + nếu nhập padding : 10px 12px 8px -> tên 10px, trái phải 12px, dưới 8px
+    + nếu nhập padding 10px 12px 8px 14px -> trên 10px, phải 12px, dưới 8px, trái 14px
+- Thuộc tính border là thành phần viên của content, nó nằm giữa thành phần padding với thành phần margin, khi tăng kí thước border lên thì kích thước background của content cũng tăng lên
+ + có nhiều thuộc tính border-width, border-style, border color
+ + với border style là solid thì chiều dày mặc định của border là 2px, vậy nên nếu chỉ set border cho 1 hướng thì phải set width cho các hướng khác là 0
+- Thuộc tính margin là khoảng cách nằm bên ngoài của element, khi tăng kích thước của margin thì kích thước background của content sẽ không tăng lên
+ + float : left -> các element sẽ nằm ngang theo bên phải
+-Thuộc tính box-sizing sẽ giúp chúng ta cân bằng kích thước bao gồm cả border và padding bằng với kích thước đã đặt ban đầu
+ + width 100px, height 100px , padding 10px, border width 10px -> tổng kích thước -> content width 60px + height 60px
+ + nếu padding và border quá lớn thì content sẽ bị vỡ
+- CSS function
+    + var() -> Trong CSS, var() biến báo . hàm được sử dụng để chèn giá trị của một thuộc tính tùy chỉnh (còn được gọi là biến CSS) vào khai báo CSS.
+    + linear-gradient() -> Hàm gradient() tuyến tính trong CSS tạo ra một hình ảnh bao gồm sự chuyển tiếp mượt mà giữa hai hoặc nhiều màu được chỉ định dọc theo một đường thẳng. Nó thường được sử dụng cho nền
+    + rgba() set màu rgba
+    + rgb() set màu RGB
+    + calc() hàm giúp tính toán
+    + attr() dùng để get value của attribute 1 thẻ
+
+- CSS pseudo-class (lớp giả)
+ + :root -> lớp giả tham chiếu đến vần tử gốc html
+ + :hover -> các thuộc tính sẽ được kích hoạt khi di chuột vào element
+ + :active -> các thuộc tính sẽ được kích hoạt khi click chuột vào element
+ + first-child -> lấy được thẻ con đầu tiên 
+ + last-child -> lấy được thẻ con cuối cùng
+
+- CSS pseudo-elements (phần tử giả) tạo ra các phần tử giả và có thể css cho nó
+    + ::before 
+    + ::after
+    + ::first-letter -> kí tự đầu tiên của element
+    + ::first-line -> dòng đầu tiên của element
+    + ::selection -> apply css cho element khi chúng ta kéo chuột select vào nó
+
+- Thuộc tính position
+    + Relative -> tương đối (element có thể di chuyển mọi nơi, có thể đè lên các element khác)
+    + Absolute -> tuyệt đối (element phụ thuộc vào vị trí của element cha có thuộc tính position, và các thẻ con đã khai báo thuộc tính position : absolute thì chỉ được di chuyển vị trí bên trong thẻ cha)
+    + Fixed -> phụ thuộc vào khung trình duyệt
+    + Sticky -> phụ thuộc vào khung trình duyệt (bám dính) nhưng không khuyến khích dùng bởi vì một số trình duyệt không hổ trợ
