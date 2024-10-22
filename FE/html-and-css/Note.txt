@@ -85,3 +85,29 @@
     + Absolute -> tuyệt đối (element phụ thuộc vào vị trí của element cha có thuộc tính position, và các thẻ con đã khai báo thuộc tính position : absolute thì chỉ được di chuyển vị trí bên trong thẻ cha)
     + Fixed -> phụ thuộc vào khung trình duyệt
     + Sticky -> phụ thuộc vào khung trình duyệt (bám dính) nhưng không khuyến khích dùng bởi vì một số trình duyệt không hổ trợ
+
+- Flex box là kĩ thuật có tính linh động cao
+    + Layout khi sử dụng flex box sẽ gồm : Flex container và flex item
+    + Layout khi sử dụng flex box sẽ có thuộc tính
+        - main axis : trục chính (sẽ có main start và main end) nó sẽ quyết định hướng mà flex item được nằm
+        - cross axis : trục vuông góc với trục chính (sẽ có cross start và cross end) sẽ quyết định việc xuống hàng thì flex item sẽ lên trên hay xuống dưới
+        - main size là kích thước chính của flex item , song song với main axis
+        - cross size là kích thước flex item song song với croos axis
+        - main start là phía bắt đầu của flex item, main end thì ngược lại
+
+- Các thuộc tính được sử dụng trong flex box
+    + display: flex, inline-flex sẽ quyết định layout có sử dụng flex box hay không
+    + flex-direction: row (main axis nằm ngang) | column (main axis nằm dọc) giúp thay đổi phương hướng của main axis, mặc đinh sẽ là row
+    + flex-wrap: nowrap(không xuống dòng) | wrap (xuống dòng) | wrap-reverse (không xuống dòng mà nhảy lên trên dòng trên -> đảo chiều cross start và cross end) để chọn kiểu xuống dòng trong flex box
+    + flex-basis : <length> điều chỉnh kích thước của main size
+    + justify-content (apply cho flex container) : flex-start | flex-end | center | space-between | space-around giúp căn chỉnh vị trí của flex-item theo main axis
+    + justify-self (apply cho flex item) : flex-start | flex-end | center tương tự như justify-content nhưng apply cho riêng flex item
+    + align-content (apply cho flex container) : flex-start | flex-end | center giúp căn chỉnh vị trí của flex-item theo cross axis
+    + align-self (apply cho flex item) : flex-start | flex-end | center tương tự align-content nhưng apply cho mỗi flex item
+    + flex-grow : <number> thay đổi kích thước main size của flex item giúp tăng, kích thước này rất linh động
+    + flex-shrink : <number> thay đổi kích thước main size của flex item giúp giảm, kích thước này rất linh động
+    + flex:<number> cú pháp viết tắt cho flex-basis, flex-grow, flex-shrink
+    + order : quyết định thứ tự của flex item
+    + flex-flow: cú pháp viết tắt của flex-direction và flex-wrap
+
+- Trong flex container có nhiều flex item mà chỉ có 1 flex item có flex >= 1 thì flex item đó sẽ cố gắng chiếm hết không gian theo chiều main axis
