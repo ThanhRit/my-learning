@@ -111,3 +111,16 @@
     + flex-flow: cú pháp viết tắt của flex-direction và flex-wrap
 
 - Trong flex container có nhiều flex item mà chỉ có 1 flex item có flex >= 1 thì flex item đó sẽ cố gắng chiếm hết không gian theo chiều main axis
+- CSS BEM (Block Element modifier)
+    + là tiêu chuẩn đặt tên class khi viết css
+    + (Block Element modifier) -Block : khối, Element: phần tử nằm trong khối, modifier: Bổ sung ý nghĩa cho block và element
+    + Vì sao nên dùng BEM :
+        - Tránh mỗi người đặt một kiểu
+        - Tránh members đặt class trùng nhau, CSS đè lên nhau
+    + Cú pháp:
+        - .block
+        - .block__element
+        - .block--modifier
+        - .block__element--modifier
+
+- Cú pháp .class + .class sẽ áp dụng selector cho các element kế bên cũng tên class (không áp dụng cho element đầu tiên)

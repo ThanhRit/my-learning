@@ -77,3 +77,60 @@ h1{
 .main-column{
     flex: 3;
 }
+
+/* BEM BUTTON CSS */
+
+.btn-container{
+    margin-top: 10px;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity .2s ease;
+    min-width: 140px;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn + .btn {
+    margin-left: 16px;
+}
+
+.btn--success{
+    background-color: #71be34;
+}
+
+.btn--warn{
+    background-color: #ffb702;
+}
+
+.btn--danger{
+    background-color: #ff623d;
+}
+
+.btn-disabled{
+    opacity: 0.4 !important;
+    cursor: default;
+}
+
+.btn--size-s{
+    padding: 12px 28px;
+}
+
+.btn--size-l{
+    padding: 22px 38px;
+}
+
+.btn--size-xl{
+    padding: 32px 98px;
+}
