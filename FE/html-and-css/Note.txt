@@ -124,3 +124,46 @@
         - .block__element--modifier
 
 - Cú pháp .class + .class sẽ áp dụng selector cho các element kế bên cũng tên class (không áp dụng cho element đầu tiên)
+- z-index : Thuộc tính z-index trong CSS được sử dụng để xác định thứ tự chồng chéo của các phần tử HTML trên trang web. Các phần tử có giá trị z-index cao hơn sẽ nằm trên các phần tử có giá trị z-index thấp hơn.
+- Khi nào không nên dùng BEM để đặt tên css 
+    + Nếu những element dùng chung và xuất hiện nhiều nơi trên website
+    + Block con chứa nhiều element (nên đặt tên thành 1 block mới)
+
+- Tối ưu sử dụng hình ảnh trên trang web
+    1. Sử dụng hình ảnh phù hợp?
+        + Ảnh dạng hình học, vector, v.v : định dạng SVG
+        + Ảnh Bitmap transparent: PNG, WEBP
+        + Bitmap nhưng không có transparent: JPEG, WEBP
+    2. Nén hình ảnh (giảm dung lượng)
+        - https://tinypng.com/
+    3. Sử dụng kích thước ảnh phù hợp
+        - Original : 4000px x 4000px, Figma: 800px x 800px (CSS), Resize: 1600px x 1600px (2x), đáp ứng tố cho cả màn hình PPI/DPI cao (retina)
+        - PPI (Pixel per inch), DPI (Dots per inch) : 100 DPI, 300DPI
+    
+    4. Sử dụng thuộc tính srcset trong thẻ img :
+        - cú pháp
+            <img
+                srcset="[ảnh1] 100w, [ảnh2] 200w,....."
+                sizes="kích thước tùy theo độ rộng của trình duyệt" -> chỉ mang tính hướng dẫn, mỗi dấu phẩy ngăn cách 1 điều kiện, nếu điều kiện nào đúng thì sẽ áp dụng kích thước của điều kiện đó còn không sẽ dùng cái default
+                src="ảnh lớn nhất"
+                alt="văn bản hiển thị khi đoạn text bị lỗi"
+            />
+        - ví dụ:
+            <img
+                srcset="
+                ./avatar-100x100.jpg 100w,
+                ./avatar-200x200 200w,
+                .avatar-400x400 400w
+                "
+                sizes="(max-width: 575px) 100px, (max-width: 991px) 200px, 400px"
+                src="ảnh lớn nhất"
+                alt="văn bản hiển thị khi đoạn text bị lỗi"
+            />
+
+- Reset CSS: import link CDN trong trang https://cdnjs.com/libraries/normalize         
+- Các bước để xây dựng website html css
+    + Làm ra 1 thẻ chứa tất cả các nội dung của website
+    + Làm từng thành phần 1 (header -> content -> footer)
+- Thẻ header dùng để làm phần trên của trang web
+- Thẻ footer dùng để làm phần footer của trang web
+- Thẻ nav dùng để làm phần navbar cho trang web

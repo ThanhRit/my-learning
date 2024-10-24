@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính srcset của thẻ img</title>
+</head>
+<body>
+    <img
+        srcset="
+        ./images/anh1_100x100.jpg 100w,
+        ./images/anh1_200x200.jpg 200w,
+        ./images/anh1_400x400.jpg 400w
+        "
+        sizes="(max-width: 575px) 100px, (max-width: 991px) 200px, 400px"
+        src="./images/anh1.jpg"
+        alt="văn bản hiển thị khi đoạn text bị lỗi"
+    />
+</body>
+</html>
